@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 8001
 spring:
   cloud:
     # // 详细配置见https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-discovery
@@ -12,7 +12,7 @@ spring:
         username: nacos
         password: nacos
         ip: 127.0.0.1 # 指定当前实例注册时的ip，多网环境最好设置
-        service: sample-provider # 注册的服务名称，如果没有值则取${spring.application.name}
+        service: sample-consumer # 注册的服务名称，如果没有值则取${spring.application.name}
 
 #  application:
 #    name: sample-provider

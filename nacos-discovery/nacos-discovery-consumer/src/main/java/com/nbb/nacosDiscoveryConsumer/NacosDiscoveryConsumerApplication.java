@@ -1,4 +1,4 @@
-package com.nbb.nacosDiscoveryProvider;
+package com.nbb.nacosDiscoveryConsumer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -10,10 +10,10 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 @EnableDiscoveryClient
 @Slf4j
-public class NacosDiscoveryProviderApplication {
+public class NacosDiscoveryConsumerApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(NacosDiscoveryProviderApplication.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(NacosDiscoveryConsumerApplication.class, args);
 
         Environment env = applicationContext.getEnvironment();
         String port = env.getProperty("server.port");
