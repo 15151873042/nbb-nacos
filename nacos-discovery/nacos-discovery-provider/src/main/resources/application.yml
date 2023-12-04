@@ -1,0 +1,21 @@
+server:
+  port: 8070
+spring:
+  cloud:
+    # // 详细配置见https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-discovery
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+        # 指定当前实例注册时的ip，多网环境最好设置
+        ip: 127.0.0.1
+        # 是否启动服务注册
+        enabled: true
+        # 注册的服务名称，如果没有值则取${spring.application.name}
+        service: sample-provider
+
+#  application:
+#    name: sample-provider
