@@ -7,11 +7,11 @@
 spring:
   cloud:
     config:
-      ##########################################
       override-none: true # 该配置放入配置中心文件中，表示项目本地配置文件可以覆盖配置中心的配置
-      #########################################
+
     nacos:
       config:
+        enabled: true # 是否启用nacos-config（如果引用了jar包，而不使用配置中心，则需要设置成false）
         server-addr: 127.0.0.1:8848
         username: nacos
         password: nacos
