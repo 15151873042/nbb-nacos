@@ -18,6 +18,10 @@ spring:
 #    name: sample-provider
 
 
+
+# 配置sample-provider服务的ribbon信息
+# 详细配置见：https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html
 sample-provider:
   ribbon:
+    # 负责均衡策略
     NFLoadBalancerRuleClassName: com.nbb.nacosDiscoveryConsumer.framework.ribbon.SameClusterPriorityRule
